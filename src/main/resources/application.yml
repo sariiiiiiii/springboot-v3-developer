@@ -9,3 +9,8 @@ spring:
         format_sql: true
     # \uD14C\uC774\uBE14 \uC0DD\uC131 \uD6C4\uC5D0 data.sql \uC2E4\uD589
     defer-datasource-initialization: true
+  datasource:
+    url: jdbc:h2:mem:testdb
+  h2:
+    console:
+      enabled: true

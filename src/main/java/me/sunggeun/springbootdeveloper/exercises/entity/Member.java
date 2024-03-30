@@ -1,4 +1,4 @@
-package me.sunggeun.springbootdeveloper.entity;
+package me.sunggeun.springbootdeveloper.exercises.entity;
 
 import jakarta.persistence.*;
 import lombok.AccessLevel;

@@ -1,7 +1,7 @@
-package me.sunggeun.springbootdeveloper.controller;
+package me.sunggeun.springbootdeveloper.exercises.controller;
 
-import me.sunggeun.springbootdeveloper.entity.Member;
-import me.sunggeun.springbootdeveloper.repository.MemberRepository;
+import me.sunggeun.springbootdeveloper.exercises.entity.Member;
+import me.sunggeun.springbootdeveloper.exercises.repository.MemberRepository;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;

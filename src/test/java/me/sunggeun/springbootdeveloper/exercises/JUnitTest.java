@@ -1,4 +1,4 @@
-package me.sunggeun.springbootdeveloper;
+package me.sunggeun.springbootdeveloper.exercises;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;

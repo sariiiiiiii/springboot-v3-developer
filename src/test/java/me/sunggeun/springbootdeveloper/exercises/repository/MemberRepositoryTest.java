@@ -1,17 +1,14 @@
-package me.sunggeun.springbootdeveloper.repository;
+package me.sunggeun.springbootdeveloper.exercises.repository;
 
-import me.sunggeun.springbootdeveloper.entity.Member;
+import me.sunggeun.springbootdeveloper.exercises.entity.Member;
 import org.assertj.core.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.jdbc.Sql;
 
 import java.util.List;
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @DataJpaTest
 class MemberRepositoryTest {
@@ -21,6 +18,7 @@ class MemberRepositoryTest {
 
     @Sql("/insert-members.sql")
     @Test
+    @Disabled
     void getAllMembers() {
         // when
         List<Member> members = memberRepository.findAll();

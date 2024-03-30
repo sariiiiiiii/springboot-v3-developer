@@ -1,6 +1,6 @@
-package me.sunggeun.springbootdeveloper.repository;
+package me.sunggeun.springbootdeveloper.exercises.repository;
 
-import me.sunggeun.springbootdeveloper.entity.Member;
+import me.sunggeun.springbootdeveloper.exercises.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

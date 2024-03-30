@@ -1,8 +1,8 @@
-package me.sunggeun.springbootdeveloper.controller;
+package me.sunggeun.springbootdeveloper.exercises.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.sunggeun.springbootdeveloper.entity.Member;
-import me.sunggeun.springbootdeveloper.service.TestService;
+import me.sunggeun.springbootdeveloper.exercises.entity.Member;
+import me.sunggeun.springbootdeveloper.exercises.service.TestService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 

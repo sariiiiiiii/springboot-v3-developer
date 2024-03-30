@@ -1,0 +1,20 @@
+### AddArticle
+POST localhost:8080/api/articles
+Content-Type: application/json
+
+{
+  "title": "제목",
+  "content": "내용"
+}
+
+### Articles
+GET localhost:8080/api/articles
+Content-Type: application/json
+
+### Article
+GET localhost:8080/api/articles/2
+Content-Type: application/json
+
+### Delete
+DELETE localhost:8080/api/articles/1
+Content-Type: application/json
