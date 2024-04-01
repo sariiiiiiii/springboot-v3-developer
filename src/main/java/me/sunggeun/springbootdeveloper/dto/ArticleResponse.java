@@ -2,15 +2,30 @@ package me.sunggeun.springbootdeveloper.dto;
 
 import me.sunggeun.springbootdeveloper.domain.Article;
 
+import java.time.LocalDateTime;
+
 public record ArticleResponse(
+        Long id,
         String title,
-        String content
+        String content,
+        LocalDateTime createdAt
 ) {
+
+    public ArticleResponse() {
+        this(
+                null,
+                null,
+                null,
+                null
+        );
+    }
 
     public ArticleResponse(Article article) {
         this(
+                article.getId(),
                 article.getTitle(),
-                article.getContent()
+                article.getContent(),
+                article.getCreatedAt()
         );
     }
 

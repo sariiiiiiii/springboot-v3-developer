@@ -18,3 +18,12 @@ Content-Type: application/json
 ### Delete
 DELETE localhost:8080/api/articles/1
 Content-Type: application/json
+
+### Update
+PUT localhost:8080/api/articles/1
+Content-Type: application/json
+
+{
+  "title": "title",
+  "content": "content"
+}
