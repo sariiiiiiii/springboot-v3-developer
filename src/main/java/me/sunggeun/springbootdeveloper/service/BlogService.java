@@ -2,9 +2,9 @@ package me.sunggeun.springbootdeveloper.service;
 
 import lombok.RequiredArgsConstructor;
 import me.sunggeun.springbootdeveloper.domain.Article;
-import me.sunggeun.springbootdeveloper.dto.AddArticleRequest;
-import me.sunggeun.springbootdeveloper.dto.ArticleResponse;
-import me.sunggeun.springbootdeveloper.dto.UpdateArticleRequest;
+import me.sunggeun.springbootdeveloper.dto.request.AddArticleRequest;
+import me.sunggeun.springbootdeveloper.dto.response.ArticleResponse;
+import me.sunggeun.springbootdeveloper.dto.request.UpdateArticleRequest;
 import me.sunggeun.springbootdeveloper.repository.BlogRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

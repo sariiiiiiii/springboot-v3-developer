@@ -2,7 +2,7 @@ package me.sunggeun.springbootdeveloper.service;
 
 import lombok.RequiredArgsConstructor;
 import me.sunggeun.springbootdeveloper.domain.User;
-import me.sunggeun.springbootdeveloper.dto.AddUserRequest;
+import me.sunggeun.springbootdeveloper.dto.request.AddUserRequest;
 import me.sunggeun.springbootdeveloper.repository.UserRepository;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -21,6 +21,11 @@ public class UserService {
                         .password(bCryptPasswordEncoder.encode(request.password()))
                         .build()
         ).getId();
+    }
+
+    public User findById(Long userId) {
+        return userRepository.findById(userId)
+                .orElseThrow(() -> new IllegalArgumentException("Unexpected user"));
     }
 
 }

@@ -1,4 +1,4 @@
-package me.sunggeun.springbootdeveloper.dto;
+package me.sunggeun.springbootdeveloper.dto.request;
 
 import me.sunggeun.springbootdeveloper.domain.Article;
 

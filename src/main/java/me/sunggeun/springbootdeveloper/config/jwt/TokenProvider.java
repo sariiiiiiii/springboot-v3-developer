@@ -33,12 +33,12 @@ public class TokenProvider {
 
         return Jwts.builder()
                 .setHeaderParam(Header.TYPE, Header.JWT_TYPE) // 헤더 type: JWT
-                .setIssuer(jwtProperties.getIssuer()) // 내용 iss: properties 파일에서 설정한 값
+                .setIssuer(jwtProperties.issuer()) // 내용 iss: properties 파일에서 설정한 값
                 .setIssuedAt(now) // 내용 iat: 현재시간
                 .setExpiration(expiry) // 내용 exp: expiry 멤버 변수값
                 .setSubject(user.getEmail()) // 내용 sub: 유저의 이메일
                 .claim("id", user.getId()) // 클레임 id: 유저 ID
-                .signWith(SignatureAlgorithm.HS256, jwtProperties.getSecretKey()) // 서명: 비밀값과 함께 해시값을 HS256 방식으로 암호화
+                .signWith(SignatureAlgorithm.HS256, jwtProperties.secretKey()) // 서명: 비밀값과 함께 해시값을 HS256 방식으로 암호화
                 .compact();
     }
 
@@ -46,7 +46,7 @@ public class TokenProvider {
     public boolean validToken(String token) {
         try {
             Jwts.parser()
-                    .setSigningKey(jwtProperties.getSecretKey()) // 비말값으로 복호화
+                    .setSigningKey(jwtProperties.secretKey()) // 비말값으로 복호화
                     .parseClaimsJws(token);
 
             return true;
@@ -71,7 +71,7 @@ public class TokenProvider {
 
     private Claims getClaims(String token) {
         return Jwts.parser() // 클레임 조회
-                .setSigningKey(jwtProperties.getSecretKey())
+                .setSigningKey(jwtProperties.secretKey())
                 .parseClaimsJws(token)
                 .getBody();
     }

@@ -35,11 +35,11 @@ public class JwtFactory {
         return Jwts.builder()
                 .setSubject(subject)
                 .setHeaderParam(Header.TYPE, Header.JWT_TYPE)
-                .setIssuer(jwtProperties.getIssuer())
+                .setIssuer(jwtProperties.issuer())
                 .setIssuedAt(issueAt)
                 .setExpiration(expiration)
                 .addClaims(claims)
-                .signWith(SignatureAlgorithm.HS256, jwtProperties.getSecretKey())
+                .signWith(SignatureAlgorithm.HS256, jwtProperties.secretKey())
                 .compact();
     }
 

@@ -1,7 +1,7 @@
 package me.sunggeun.springbootdeveloper.controller;
 
 import lombok.RequiredArgsConstructor;
-import me.sunggeun.springbootdeveloper.dto.ArticleResponse;
+import me.sunggeun.springbootdeveloper.dto.response.ArticleResponse;
 import me.sunggeun.springbootdeveloper.service.BlogService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

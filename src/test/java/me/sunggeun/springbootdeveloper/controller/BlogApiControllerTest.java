@@ -2,11 +2,10 @@ package me.sunggeun.springbootdeveloper.controller;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import me.sunggeun.springbootdeveloper.domain.Article;
-import me.sunggeun.springbootdeveloper.dto.AddArticleRequest;
-import me.sunggeun.springbootdeveloper.dto.UpdateArticleRequest;
+import me.sunggeun.springbootdeveloper.dto.request.AddArticleRequest;
+import me.sunggeun.springbootdeveloper.dto.request.UpdateArticleRequest;
 import me.sunggeun.springbootdeveloper.repository.BlogRepository;
 import org.assertj.core.api.Assertions;
-import org.hibernate.AssertionFailure;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
